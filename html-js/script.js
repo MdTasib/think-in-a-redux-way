@@ -3,31 +3,51 @@ const counterEl = document.getElementById("counter");
 const incrementEl = document.getElementById("increment");
 const decrementEl = document.getElementById("decrement");
 
-const counter2El = document.getElementById("counter2");
-const increment2El = document.getElementById("increment2");
-const decrement2El = document.getElementById("decrement2");
-
 // initial state
-let count = 0;
-let count2 = 0;
+const initialState = {
+	value: 0,
+};
 
-// event listeners
-incrementEl.addEventListener("click", () => {
-    count++;
-    counterEl.innerText = count;
+// create reducer function
+function counterReducer(state = initialState, action) {
+	if (action.type === "increment") {
+		return {
+			...state,
+			value: state.value + 1,
+		};
+	} else if (action.type === "decrement") {
+		return {
+			...state,
+			value: state.value - 1,
+		};
+	} else {
+		return state;
+	}
+}
+
+// create store
+const store = Redux.createStore(counterReducer);
+
+const render = () => {
+	const state = store.getState();
+
+	counterEl.innerText = state.value.toString();
+};
+
+// update ui initially
+render();
+
+store.subscribe(render);
+
+// event handler
+incrementEl.addEventListener("click", function () {
+	store.dispatch({
+		type: "increment",
+	});
 });
 
-decrementEl.addEventListener("click", () => {
-    count--;
-    counterEl.innerText = count;
-});
-
-increment2El.addEventListener("click", () => {
-    count2++;
-    counter2El.innerText = count2;
-});
-
-decrement2El.addEventListener("click", () => {
-    count2--;
-    counter2El.innerText = count2;
+decrementEl.addEventListener("click", function () {
+	store.dispatch({
+		type: "decrement",
+	});
 });
