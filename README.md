@@ -1,1 +1,1 @@
-"# think-in-a-redux-way" 
+# think-in-a-redux-way
