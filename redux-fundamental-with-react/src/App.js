@@ -9,6 +9,8 @@ function App() {
 			</h1>
 
 			<Counter />
+			<Counter />
+			<Counter />
 		</div>
 	);
 }
