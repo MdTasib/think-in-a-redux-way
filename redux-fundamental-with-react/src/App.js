@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import HookCounter from "./components/HookCounter";
 import DynamicHookCounter from "./components/DynamicHookCounter";
+import VariableCounter from "./components/VariableCounter";
 
 function App() {
 	return (
@@ -13,6 +14,8 @@ function App() {
 					Simple Counter Application
 				</h1>
 
+				<VariableCounter />
+				<VariableCounter dynamic />
 				<HookCounter />
 				<DynamicHookCounter />
 			</div>
