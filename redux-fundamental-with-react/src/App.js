@@ -1,27 +1,23 @@
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import HookCounter from "./components/HookCounter";
-import DynamicHookCounter from "./components/DynamicHookCounter";
-import VariableCounter from "./components/VariableCounter";
-import ShoppingCart from "./components/shoppingCart/ShoppingCart";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import TodoList from "./components/TodoList";
 
 function App() {
 	return (
-		<Provider store={store}>
-			{/* <div className='w-screen h-screen p-10 bg-gray-100 text-slate-700'>
-				<h1 className='max-w-md mx-auto text-center text-2xl font-bold'>
-					Simple Counter Application
-				</h1>
+		<div class='grid place-items-center bg-blue-100 h-screen px-6 font-sans'>
+			<Navbar />
 
-				<VariableCounter />
-				<VariableCounter dynamic />
-				<HookCounter />
-				<DynamicHookCounter />
-			</div> */}
+			<div class='w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white'>
+				<Header />
 
-			{/* shopping cart */}
-			<ShoppingCart />
-		</Provider>
+				<hr class='mt-4' />
+				<TodoList />
+				<hr class='mt-4' />
+
+				<Footer />
+			</div>
+		</div>
 	);
 }
 
