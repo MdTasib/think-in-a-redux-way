@@ -26,13 +26,16 @@ const reducer = (state = initialState, action) => {
 			};
 
 		case FILTER_BY_SEARCH:
-			const filterBySearch = state.blogPost.filter(
-				item => item.author === action.payload
-			);
-			return {
-				...state,
-				blogPost: filterBySearch,
-			};
+			if (action.payload !== "") {
+				let filteredArray = state.blogPost.filter(item => {
+					return (
+						item.title.toLowerCase().includes(action.payload) !== false && item
+					);
+				});
+				return { ...state, blogPost: filteredArray };
+			}
+
+			return state;
 
 		default:
 			return state;

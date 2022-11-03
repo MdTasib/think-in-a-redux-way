@@ -24,9 +24,7 @@ function Blog({
 							{type}
 						</span>
 					</p>
-					<a href='#' class='block mt-1'>
-						<p class='text-xl font-semibold text-gray-900'>{title}</p>
-					</a>
+					<p class='text-xl font-semibold text-gray-900 pt-4'>{title}</p>
 				</div>
 				<div class='mt-6 flex items-center'>
 					<div class='flex-shrink-0'>
