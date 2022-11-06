@@ -3,24 +3,24 @@
     {
       "id": 1,
       "text": "Learn Vanilla JavaScript",
-      "completed": true,
+      "completed": false,
       "color": "yellow"
     },
     {
       "id": 2,
       "text": "Learn Modern ES6+ JavaScript",
-      "completed": true,
+      "completed": false,
       "color": "red"
     },
     {
       "id": 3,
       "text": "Learn React JS",
-      "completed": true,
+      "completed": false,
       "color": "yellow"
     },
     {
       "text": "Learn Redux Basics",
-      "completed": true,
+      "completed": false,
       "id": 4,
       "color": "red"
     },
@@ -29,11 +29,6 @@
       "completed": true,
       "id": 5,
       "color": "red"
-    },
-    {
-      "text": "learn Redux",
-      "completed": false,
-      "id": 6
     },
     {
       "text": "Learn Redux Toolkit",
@@ -51,14 +46,10 @@
       "id": 9
     },
     {
-      "text": "hello",
+      "text": "he",
       "completed": false,
-      "id": 10
-    },
-    {
-      "text": "hello world",
-      "completed": false,
-      "id": 11
+      "id": 12,
+      "color": "green"
     }
   ]
 }
