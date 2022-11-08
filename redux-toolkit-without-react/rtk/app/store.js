@@ -1,9 +1,11 @@
 const confiqureStore = require("@reduxjs/toolkit").configureStore;
 const counterReducer = require("../features/counter/counterSlice");
+const dynamicCounterReducer = require("../features/dynamicCounter/dynamicCounter");
 
 const store = confiqureStore({
 	reducer: {
 		counter: counterReducer,
+		dynamicCounter: dynamicCounterReducer,
 	},
 });
 
