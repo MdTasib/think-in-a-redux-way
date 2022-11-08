@@ -4,9 +4,9 @@ const {
 	dynamicCounterActions,
 } = require("./features/dynamicCounter/dynamicCounter");
 
-console.log(store.getState());
+// console.log(store.getState());
 store.subscribe(() => {
-	console.log(store.getState());
+	// console.log(store.getState());
 });
 
 // counter
