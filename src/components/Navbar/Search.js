@@ -4,7 +4,7 @@ export default function Search() {
 	return (
 		<form>
 			<input
-				class='outline-none border-none mr-2'
+				className='outline-none border-none mr-2'
 				type='search'
 				name='search'
 				placeholder='Search'
