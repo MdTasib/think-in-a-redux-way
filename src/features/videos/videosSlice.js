@@ -3,7 +3,7 @@ import { getVideos } from "../videos/videosApi";
 
 // initial state
 const initialState = {
-	vidoes: [],
+	videos: [],
 	isLoading: false,
 	isError: false,
 	error: "",
@@ -27,13 +27,13 @@ const videoSlice = createSlice({
 			})
 			.addCase(fetchVideos.fulfilled, (state, action) => {
 				state.isLoading = false;
-				state.vidoes = action.payload;
+				state.videos = action.payload;
 			})
 			.addCase(fetchVideos.rejected, (state, action) => {
 				state.isError = true;
 				state.error = action.error?.message;
 				state.isLoading = false;
-				state.vidoes = [];
+				state.videos = [];
 			});
 	},
 });
